@@ -5397,7 +5397,7 @@ export default function (context, pluginCallButtons, plugins, lang, options, _re
             }
 
             // figure
-            if (util.isFigures(tagName)) {
+            if (util.isFigures(tagName) || m.match(/se-(image|video)-container/)) {
                 const sv = m.match(/style\s*=\s*(?:"|')[^"']*(?:"|')/);
                 if (!v) v = [];
                 if (sv) v.push(sv[0]);
