@@ -54,7 +54,7 @@
             hr_dashed: 'Штриховая',
             table: 'Таблица',
             link: 'Ссылка',
-            math: 'математический',
+            math: 'Формула',
             image: 'Изображение',
             video: 'Видео',
             audio: 'Аудио',
@@ -89,7 +89,7 @@
                 bookmark: 'Закладка'
             },
             mathBox: {
-                title: 'математический',
+                title: 'Формула',
                 inputLabel: 'Математическая запись',
                 fontSizeLabel: 'Кегль',
                 previewLabel: 'Предварительный просмотр'
