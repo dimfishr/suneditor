@@ -70,7 +70,7 @@ export default {
             '</div>' +
             '<div class="se-dialog-body">' +
                 '<div class="se-dialog-form">' +
-                    '<label>' + lang.dialogBox.mathBox.inputLabel + ' (<a href="' + KATEX_WEBSITE + '" target="_blank">KaTeX</a>)</label>' +
+                    '<label>' + lang.dialogBox.mathBox.inputLabel + ' KaTeX</label>' +
                     '<textarea class="se-input-form se-math-exp" type="text"></textarea>' +
                 '</div>' +
                 '<div class="se-dialog-form">' +
@@ -152,7 +152,7 @@ export default {
             result = this.options.katex.src.renderToString(exp, {throwOnError: true, displayMode: true});
         } catch(error) {
             this.util.addClass(this.context.math.focusElement, 'se-error');
-            result = '<span class="se-math-katex-error">Katex syntax error. (Refer <a href="' + KATEX_WEBSITE + '" target="_blank">KaTeX</a>)</span>';
+            result = '<span class="se-math-katex-error">KaTeX syntax error.</span>';
             console.warn('[SUNEDITOR.math.Katex.error] ', error);
         }
         return result;
