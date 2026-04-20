@@ -1,6 +1,6 @@
 {
 	"name": "suneditor",
-	"version": "3.1.4",
+	"version": "3.1.4-1",
 	"description": "Vanilla JavaScript based WYSIWYG web editor",
 	"author": "Yi JiHong",
 	"license": "MIT",
@@ -55,8 +55,8 @@
 	"scripts": {
 		"dev": "webpack-dev-server --config webpack/dev.js",
 		"start": "npm run dev",
-		"build:dev": "cross-env NODE_ENV=development webpack --config webpack/builder.js && cross-env NODE_ENV=development webpack --config webpack/builder-contents.js && rm -f dist/_suneditor-contents.js",
-		"build:prod": "cross-env NODE_ENV=production webpack --config webpack/builder.js && cross-env NODE_ENV=production webpack --config webpack/builder-contents.js && rm -f dist/_suneditor-contents.js",
+		"build:dev": "cross-env NODE_ENV=development webpack --config webpack/builder.js && cross-env NODE_ENV=development webpack --config webpack/builder-contents.js && del dist\\_suneditor-contents.js",
+		"build:prod": "cross-env NODE_ENV=production webpack --config webpack/builder.js && cross-env NODE_ENV=production webpack --config webpack/builder-contents.js && del dist\\_suneditor-contents.js",
 		"lint:type": "npx tsc --noEmit",
 		"lint:fix-js": "npx eslint src/ --fix",
 		"lint:fix-ts": "npx eslint types/ --fix",

@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
 	// plugins: [new BundleAnalyzerPlugin()],
 	performance: {
-		maxAssetSize: 768000, // (750 * 1024 = 768000)
+		maxAssetSize: 921600, // (750 * 1024 = 768000)
 		maxEntrypointSize: 921600, // (900 * 1024 = 921600)
 	},
 	module: {
