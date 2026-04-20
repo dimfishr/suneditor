@@ -24,7 +24,7 @@ coverage/
 temp_coverage/
 
 #only release branch, npm
-dist/**
+#dist/**
 
 # Playwright
 test-results/
