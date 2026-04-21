@@ -329,7 +329,7 @@ class FontSize extends PluginInput {
 	 * @returns {string} - The computed font size from the editor.
 	 */
 	#getDefaultSize() {
-		return this.$.frameContext.get('wwComputedStyle').fontSize;
+		return this.unitMap[this.sizeUnit].default + this.sizeUnit;//this.$.frameContext.get('wwComputedStyle').fontSize;
 	}
 
 	/**
