@@ -95,7 +95,6 @@ export function CreateHTML_modal({ lang, icons, plugins }, pluginOptions) {
 		</div>
 		<div class="se-modal-tabs">
 			<button type="button" class="_se_tab_link active" data-tab-link="image">${lang.image}</button>
-			<button type="button" class="_se_tab_link" data-tab-link="url">${lang.link}</button>
 		</div>
 		<form method="post" enctype="multipart/form-data">
 			<div class="_se_tab_content _se_tab_content_image">
