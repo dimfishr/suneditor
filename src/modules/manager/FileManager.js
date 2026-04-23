@@ -65,17 +65,22 @@ class FileManager {
 		let formData = null;
 		// create formData
 		if ('length' in data) {
-			formData = new FormData();
-			for (let i = 0, len = data.length; i < len; i++) {
-				formData.append('file-' + i, data[i]);
-			}
-			this.uploadFileLength = data.length;
+      if (data.length > 1) {
+        formData = new FormData();
+        for (let i = 0, len = data.length; i < len; i++) {
+          formData.append('file-' + i, data[i]);
+        }
+        this.uploadFileLength = data.length;
+      } else {
+        formData = data[0];
+        this.uploadFileLength = data[0].size;
+      }
 		} else {
 			formData = data.formData;
 			this.uploadFileLength = data.size;
 		}
 
-		this.apiManager.call({ method: 'POST', url: uploadUrl, headers: uploadHeader, data: formData, callBack, errorCallBack });
+		this.apiManager.call({ method: 'PUT', url: uploadUrl, headers: uploadHeader, data: formData, callBack, errorCallBack });
 	}
 
 	/**
