@@ -203,7 +203,7 @@ export class ImageUploadService {
 	 */
 	async #UploadCallBack(info, xmlHttp) {
 		if ((await this.#$.eventManager.triggerEvent('imageUploadHandler', { xmlHttp, info })) === NO_EVENT) {
-			const response = JSON.parse(xmlHttp.responseText);
+      const response = info.result ? {result: info.result} : JSON.parse(xmlHttp.responseText);
 			if (response.errorMessage) {
 				this.#error(response);
 			} else {
