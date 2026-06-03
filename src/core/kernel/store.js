@@ -120,6 +120,7 @@ class Store {
 	 * @param {StoreState[K]} value - Value to set
 	 */
 	set(key, value) {
+    if (this.#state == null) return
 		const oldValue = this.#state[key];
 		this.#state[key] = value;
 

@@ -211,7 +211,7 @@ class Toolbar {
 			if (((this.isBalloonMode || this.isInlineMode) && this.#options.get('toolbar_width') === 'auto') || (this.#store.mode.isSubBalloon && this.#options.get('toolbar_sub_width') === 'auto')) {
 				w = this.#frameContext.get('topArea').offsetWidth;
 			} else {
-				w = this.#context.get(this.keyName.main).offsetWidth;
+				w = this.#context.get(this.keyName.main)?.offsetWidth;
 			}
 
 			let responsiveWidth = 'default';

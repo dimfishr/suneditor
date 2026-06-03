@@ -883,6 +883,7 @@ class UIManager {
 	 * @param {ResizeObserverEntry|null} resizeObserverEntry - `ResizeObserver` entry for height calculation
 	 */
 	_emitResizeEvent(fc, h, resizeObserverEntry) {
+    if (!fc) return;
 		h =
 			h === -1
 				? resizeObserverEntry?.borderBoxSize && resizeObserverEntry.borderBoxSize[0]
